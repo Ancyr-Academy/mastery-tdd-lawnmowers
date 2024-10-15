@@ -35,8 +35,8 @@ If two lawnmowers collide, the program stops.
 5 5 
 1 2 N 
 LALALALAA 
-3 3 E 
-AADDAADADDA
+3 3 E
+AARRAARARRA
 ```
 
 - The surface's north-east point is at (5,5).
@@ -46,7 +46,7 @@ AADDAADADDA
 Expected output:
 ```
 1 3 N
-5 1 E
+3 3 S
 ```
 
 

@@ -1,8 +1,13 @@
 import { ISource, Lawnmower } from './simulation.js';
+import fs from 'fs/promises';
+import path from 'path';
 
 export class FileSource implements ISource {
-  load(): Promise<Lawnmower[]> {
-    return Promise.resolve([]);
+  async load(): Promise<Lawnmower[]> {
+    const filePath = path.resolve('input.txt');
+    const content = await fs.readFile(filePath, 'utf-8');
+
+    return this.parse(content.split('\n'));
   }
 
   parse(params: string[]): Lawnmower[] {
